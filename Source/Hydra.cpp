@@ -34,11 +34,13 @@ QMenu* createContextMenu(QDialog* settingsDialog) {
 }
 
 int main(int argc, char** argv) {
+#ifdef __linux__
 	// Check if there is an open Xorg display
 	if (getenv("DISPLAY") == nullptr) {
 		std::cerr << "No graphical environment is available, shutting down." << std::endl;
 		return 1;
 	}
+#endif
 
 	std::shared_ptr<DbManager> dbManager;
 	try {
