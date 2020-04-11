@@ -18,8 +18,8 @@ target_link_libraries(Hydra Qt5::Widgets SQLite::SQLite3)
 
 add_custom_command(TARGET Hydra POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_CURRENT_SOURCE_DIR}/water_bottle.svg
-        $<TARGET_FILE_DIR:Hydra>/water_bottle.svg)
+        ${CMAKE_CURRENT_SOURCE_DIR}/logo.svg
+        $<TARGET_FILE_DIR:Hydra>)
 
 # On Windows we want to copy the shared libraries next to the application.
 if (WIN32)

@@ -15,6 +15,7 @@ namespace hydra {
 	}
 
 	void SettingsDialog::configureDialog(QSystemTrayIcon* icon, SettingsManager* settings) {
+		setWindowIcon(icon->icon());
 		QVBoxLayout* layout = new QVBoxLayout();
 		setLayout(layout);
 		

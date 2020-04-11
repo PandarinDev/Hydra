@@ -68,7 +68,7 @@ int main(int argc, char** argv) {
 	});
 	application.setQuitOnLastWindowClosed(false);
 
-	QIcon icon("water_bottle.svg");
+	QIcon icon("logo.svg");
 	QSystemTrayIcon* trayIcon = new QSystemTrayIcon(icon);
 	SettingsDialog* settingsDialog = new SettingsDialog(trayIcon, settingsManager);
 	QObject::connect(settingsDialog, &SettingsDialog::accepted, settingsManager, &SettingsManager::save);
